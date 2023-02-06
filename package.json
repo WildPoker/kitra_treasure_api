@@ -1,0 +1,67 @@
+{
+  "name": "kitra_treasure_api",
+  "version": "1.0.0",
+  "description": "Kitra Treasure Finder API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "set NODE_ENV=development && node --max-old-space-size=4096 src/index",
+    "start:nodemon": "set NODE_ENV=development && nodemon --max-old-space-size=4096 ./src/index",
+    "seed": "set NODE_ENV=development && node seeding/seeder",
+    "lint": "xo",
+    "linter": "eslint --fix './src/**/*.js'",
+    "linter:seed": "eslint --fix ./seeding/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WildPoker/kitra_treasure_api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WildPoker/kitra_treasure_api/issues"
+  },
+  "homepage": "https://github.com/WildPoker/kitra_treasure_api#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "email-validator": "^2.0.4",
+    "express": "^4.18.2",
+    "helmet": "^6.0.1",
+    "is-valid-coordinates": "^1.0.0",
+    "isomorphic-fetch": "^3.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "module-alias": "^2.2.2",
+    "moment": "^2.29.4",
+    "mongo-uri-builder": "^4.0.0",
+    "mongoose": "^6.8.4",
+    "mustache": "^4.2.0",
+    "node-cron": "^3.0.2",
+    "npm": "^9.3.1",
+    "uuid": "^9.0.0",
+    "winston": "^3.8.2",
+    "xo": "^0.53.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1",
+    "faker": "^5.5.3",
+    "heml": "^0.0.1",
+    "husky": "^7.0.4",
+    "jsdoc": "^3.6.7",
+    "mongo-seeding": "^3.7.0",
+    "npx": "^3.0.0",
+    "nyc": "^15.1.0"
+  },
+  "_moduleAliases": {
+    "@src": "./src",
+    "@test": "./test",
+    "@seeding": "./seeding",
+    "@emails": "./emails"
+  }
+}
